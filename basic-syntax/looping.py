@@ -60,6 +60,7 @@ for key, value in my_dict.items():
 
 
 # infinite loop with break
+'''
 print("Infinite loop with break")
 while True:
     user_input = input("Type 'exit' to stop the loop: ")
@@ -68,8 +69,7 @@ while True:
         break
     else:
         print(f"You entered: {user_input}")
-
-
+'''
 # print even numbers from 1 to 20
 print("Even numbers from 1 to 20")
 count = 1
@@ -78,3 +78,15 @@ for num in range(1, 20):
         print(num)
         count+=1
 print("Total even numbers:", count)
+
+
+
+# Check letter in string
+fruit = "apple"
+if "a" in fruit:
+    print("Letter 'a' is present in the fruit name.")
+else:  
+    print("Letter 'a' is not present in the fruit name.")
+
+
+

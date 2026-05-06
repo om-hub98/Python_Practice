@@ -23,3 +23,23 @@ name = "Alice"
 age = 30
 formatted_string = f"My name is {name} and I am {age} years old."
 print("Formatted String : ", formatted_string)  # Output: My name is Alice and I am 30 years old.
+
+
+
+#5. Indexing and slicing
+
+## please note => 
+## Single colon =>      start:stop =>      1:4=> means start index : stop index (exclude stop index)
+## Double colon mean => start:stop:step    ::3 => means start index is 0: stop index length of string : step (every 3rd character) 
+text = "Python"
+print("First character : ", text[0])  # Output: P
+print("Last character : ", text[-1])  # Output: n
+print("Substring : ", text[1:4])  # Output: yth
+print("Every second character : ", text[::2])  # Output: Pto
+print("Reversed string : ", text[::-1])  # Output: nohtyP
+print("Characters third last to end : ", text[-3:])  # Output: hon
+# text[0] = "J"  # This will raise an error because strings are immutable in Python
+# print("Modified text : ", text)  # Output: TypeError: 'str' object does not support item assignment
+
+
+
