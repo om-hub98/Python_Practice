@@ -1,2 +1,3 @@
-name = input("Enter your name: ")
-print(f"Hello, {name}!")
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"({i}, {j})")

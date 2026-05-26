@@ -15,5 +15,5 @@ p1 = Person("Omraj", 27)
 # Calling method
 p1.greet()
 
-p2 = Person("Niraj", 25);
-p2.greet()
+p1 = Person("Niraj", 25);
+p1.greet()

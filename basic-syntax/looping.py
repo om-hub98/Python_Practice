@@ -1,3 +1,5 @@
+## Range function examples
+
 #print stars in one directional
 # iteraton is i++
 for i in range(1, 6):
@@ -5,7 +7,11 @@ for i in range(1, 6):
 
 print("Iteration in +2 steps")
 
-#print i+2
+# print i+2 
+# starts from index 1 not 0
+# ends at index 9 not 10
+# step is 2 so it will print 1,3,5,7,9
+# range(start, stop, step)
 for i in range(1, 10, 2):
     print("Index :", i, "*" * i)
 
@@ -32,6 +38,7 @@ for i in range(1, 4):
     for j in range(1, 4):
         print(f"({i}, {j})")
 
+## iterating over a list 
 
 # string iteration
 print("String iteration")
