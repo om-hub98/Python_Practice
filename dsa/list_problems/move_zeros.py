@@ -2,6 +2,7 @@
 # Move all zeros to the right
 
 input = [0,1,2,4,0,3,5]
+output = [1,2,4,3,5,0,0]
 
 # Solution 1 => Simple using extra space
 # Approach - 1. Create a new list to store non_zeros.

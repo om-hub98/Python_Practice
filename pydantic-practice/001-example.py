@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 from pydantic import BaseModel, ValidationError, Field
 
 class User(BaseModel):
