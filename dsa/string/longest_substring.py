@@ -1,5 +1,7 @@
 # Find longest Substring Without Repeating Characters
-input_s = "abcabcbabc"
+input_s = "abcabcbb "
+print(f"Length of input string : {len(input_s)}")
+print(f"Trim string length : {len(input_s.strip())}")
 
 # Naive Approach
 # Time Complexity: O(n^2)
@@ -24,9 +26,23 @@ def longest_substring_optimized(s:str) -> int:
             seen.remove(s[left])
             left += 1
         seen.add(s[right])
-        max_length = max(max_length, right - left + 1)
+        max_length = max(max_length, len(seen))
     return max_length
+
+
+def lengthOfLongestSubstring(self, s: str) -> int:
+    j, count, lst = 0, 0, []
+    for i in range(len(s)):
+        if s[i] in lst:
+            count = max(count,len(lst))
+            dup_index = lst.index(s[i])
+            j = j + dup_index + 1     
+            lst = lst[dup_index + 1:]
+        lst.append(s[i])
+            
+    return max(count, len(lst))
 
 
 #print(longest_substring(input_s))
 print(longest_substring_optimized(input_s))
+#print(lengthOfLongestSubstring(0, input_s))

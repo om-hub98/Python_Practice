@@ -1,6 +1,7 @@
 def reverse_string(input:str)-> str:
     """
     Reverses the given input string.
+    Using for loop to iterate through the string in reverse order and build the reversed string.
 
     Args:
         input (str): The string to be reversed.
@@ -17,7 +18,8 @@ def reverse_string(input:str)-> str:
 
 def reverse_string_slicing(input:str)-> str:
     """
-    Reverses the given input string using slicing.
+    Reverses the given input string using slicing technique.
+    [start:stop:step] - Here, we are using step as -1 to reverse the string.
 
     Args:
         input (str): The string to be reversed.
@@ -25,16 +27,13 @@ def reverse_string_slicing(input:str)-> str:
     Returns:
         str: The reversed string.
     """
-    return   input[::-1]   # take the whole string and step backwards by 1 
+    return input[::-1]   # take the whole string and step backwards by 1 
 
 '''
 : for start/stop = use the whole sequence
 : again before -1 means default end
 -1 is the step
 '''
-
-
-
 
 def main():
     input_str = "Hello, World!"
