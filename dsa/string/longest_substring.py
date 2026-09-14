@@ -1,4 +1,7 @@
 # Find longest Substring Without Repeating Characters
+
+from collections import deque
+
 input_s = "abcabcbb "
 print(f"Length of input string : {len(input_s)}")
 print(f"Trim string length : {len(input_s.strip())}")
@@ -17,6 +20,8 @@ def longest_substring(s:str) -> int:
     return max_length
 
 
+# Optimized Approach
+# Time Complexity: O(n)
 def longest_substring_optimized(s:str) -> int:
     seen = set()
     left  = 0 
@@ -25,7 +30,7 @@ def longest_substring_optimized(s:str) -> int:
         while s[right] in seen:
             seen.remove(s[left])
             left += 1
-        seen.add(s[right])
+        seen.add(s[right]) 
         max_length = max(max_length, len(seen))
     return max_length
 
@@ -39,10 +44,24 @@ def lengthOfLongestSubstring(self, s: str) -> int:
             j = j + dup_index + 1     
             lst = lst[dup_index + 1:]
         lst.append(s[i])
-            
     return max(count, len(lst))
 
 
+def using_deque(s: str) -> str:
+
+    temp = deque()
+    max_length = 0
+    for index in range(len(s)):
+        while s[index] in temp:
+            temp.popleft()
+        temp.append(s[index])
+        max_length = max(max_length, len(temp))
+    return max_length
+
+    
+
+
 #print(longest_substring(input_s))
-print(longest_substring_optimized(input_s))
+#print(longest_substring_optimized(input_s))
 #print(lengthOfLongestSubstring(0, input_s))
+print(using_deque(input_s))
