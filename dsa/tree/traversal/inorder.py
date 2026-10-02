@@ -2,14 +2,20 @@ from ..tree_data import root
 
 # Inorder Traversal -> Left-Root-Right
 
-def inorder_traversal(root):
+def inorder_traversal(root)-> list[int]:
 
-    if root is None:
-        return
+    result = []
 
-    inorder_traversal(root.left)
-    print(root.data, end=" ")
-    inorder_traversal(root.right)
+    def inorder(node):
+        if node is None:
+            return
+
+        inorder(node.left)
+        result.append(node.data)
+        inorder(node.right)
+
+    inorder(root)
+    return result
 
 print("Inorder Traversal:")
-inorder_traversal(root)  
+print(inorder_traversal(root))
