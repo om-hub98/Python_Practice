@@ -17,3 +17,10 @@ def square_numbers_list(nums):
 
 squared_list = square_numbers_list(nums)
 print(squared_list)  # Output: [4, 16]
+
+
+# Flattening a list of lists using list comprehension
+my_list = [[10,20,30],[40,50,60],[70,80,90]]
+flattened_list = [item for sublist in my_list for item in sublist]
+print("\nFlattened list using list comprehension:")
+print(flattened_list)  # Output: [10, 20, 30, 40, 50, 60, 70, 80, 90]
